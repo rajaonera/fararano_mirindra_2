@@ -1,0 +1,44 @@
+/*
+header {
+    display: flex;
+    justify-content: space-between;
+}
+    */
+
+li {
+    display: inline;
+    float: left;
+  }
+
+a {
+    display: block;
+    padding: 8px; /* padding means distance between 2 elements */
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#legendContent {
+  padding: 10px;
+}
+
+#legendContent.collapsed {
+  display: none;
+}

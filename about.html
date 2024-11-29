@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>About</title>
+</head>
+<body class="bg-gradient-to-r from-green-500 to-blue-400">
+    <header class="h-14 bg-gradient-to-r from-green-500 to-blue-400 text-white flex justify-between">
+        <nav class = "flex justify-start">
+            <a href="./index.html" class = "nav-log">
+                <img src="./assets/logo.png" alt="FARARANO_MIRINDRA" width="54" height="54" viewBox="0 0 54 54">
+            </a>
+
+        </nav>
+
+        <ul class="hidden md:flex space-x-8">
+            <li><a href="./index.html" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#" class="hover:text-gray-300">About</a></li>
+            <li><a href="./services.html" class="hover:text-gray-300">Services</a></li>
+            <li><a href="#" class="hover:text-gray-300">Demo</a></li>
+            <li><a href="./contact.html" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+
+    </header>
+
+    <body class="bg-cover bg-center w-full" style="background-image: url('./assets/satellite.png');">
+    
+        <div class="flex items-center h-screen bg-black bg-opacity-40">
+            <!-- Left Side (Image with Overlay) -->
+            <div class="w-1/2 h-full"></div>
+            
+            <!-- Right Side (Content) -->
+            <div id="section1" class="w-1/2 bg-blue-600 bg-opacity-70 p-10 text-white">
+                <!-- Title -->
+                <h1 class="text-5xl font-bold">Solution Overview</h1>
+                
+                <!-- Description -->
+                <p class="text-lg mt-4 font-light">
+                    We are creating a digital platform that connects smallholder farmers directly with the private sector. 
+                    By incorporating precision agriculture technologies like remote sensing and machine learning, 
+                    the platform enhances farmers' resilience and productivity.
+                </p>
+                
+                <!-- Icons -->
+                <div class="flex mt-6 space-x-6">
+                    <div class="text-center">
+                        <!-- Icon 1 -->
+                        <!--img src="./assets/mrv.png" alt="Icon 1" class="w-12 mx-auto"-->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 2h10a2 2 0 012 2v16a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2zM12 18h.01" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <!-- Icon 2 -->
+                        <!--img src="https://example.com/icon2.png" alt="Icon 2" class="w-12 mx-auto"-->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14c4.418 0 8-1.79 8-4V5c0-2.21-3.582-4-8-4S4 2.79 4 5v5c0 2.21 3.582 4 8 4zM12 14v5m0 0h-2m2 0h2m-2-5a9 9 0 100 18 9 9 0 000-18z" />
+                        </svg>
+                    </div>
+                    <div class="text-center">
+                        <!-- Icon 3 -->
+                        <!--img src="https://example.com/icon3.png" alt="Icon 3" class="w-12 mx-auto"-->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 2.05c1.657 0 3.161.672 4.242 1.757A5.96 5.96 0 0118.95 7h-3.586A4.001 4.001 0 0013 6a4 4 0 00-3 1.584A3.98 3.98 0 009 6h-.051a6.019 6.019 0 00-.518.031A8.065 8.065 0 0113 4.05zM4.05 13c0-1.132.214-2.209.603-3.18.06.172.132.34.214.508a4.98 4.98 0 00.355.532A8.077 8.077 0 014.05 13zm1.76 4.94a6.067 6.067 0 001.18-.55c-.057-.194-.102-.392-.136-.593-.07-.413-.104-.834-.104-1.256 0-2.645 2.162-4.815 4.815-4.815a4.82 4.82 0 014.1 2.05 4.82 4.82 0 011.717-.682A8.067 8.067 0 0112 20.05c-1.294 0-2.523-.307-3.6-.86-.116-.065-.225-.14-.339-.214a6.056 6.056 0 01-.873-1.036c-.19.034-.381.074-.573.12a6.019 6.019 0 01-1.805 1.7zM18 13a8.036 8.036 0 01-4 2.051c.119.238.232.483.339.732a5.963 5.963 0 001.341 1.341A8.056 8.056 0 0120 13h-2zm1-2h2a8.063 8.063 0 01-1.792 4.732A5.978 5.978 0 0018 13zm0-6c-.527-.043-1.047-.168-1.55-.368a6.062 6.062 0 00-1.265-.272 8.093 8.093 0 011.764-1.458c.12.23.233.463.334.7.28.647.501 1.325.657 2.04a5.962 5.962 0 01.06.358z" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Arrow Button -->
+                <!--div class="mt-8">
+                    <button class="bg-white text-blue-600 rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div-->
+            </div>
+        </div>
+        <!--div id="section2"  class="bg-cover bg-center w-full items-center justify-center" style="background-image: url('./assets/mrv.png')"-->
+        <div id="section2"  class="bg-cover bg-center w-full items-center justify-center bg-gradient-to-r from-green-500 to-blue-400">
+        
+            <div class="relative  bg-gradient-to-r from-green-500 to-blue-400 p-8 rounded-lg shadow-lg overflow-hidden h-screen w-screen">
+                <!-- Background Image and Overlay -->
+                <img src="./assets/Fitahiana.jpg" alt="CEO" class="absolute inset-0 h-full w-1/2 object-cover rounded-lg opacity-90" />
+        
+                <!-- Quote Section -->
+                <div class="relative ml-auto p-6 w-1/2 ">
+                    <!-- Quote Marks -->
+                    <div class="text-orange-500 text-5xl leading-none">“</div>
+                    
+                    <!-- Quote Text -->
+                    <p class="text-gray-700 text-lg font-semibold leading-snug mt-2">
+                        Our approach will prioritize the well-being and prosperity of smallholder farmers by establishing an equitable system in collaboration with the private sector. We will introduce a decision-driven platform, offering clean, verified data to agribusiness companies, empowering them to make informed and impactful decisions that foster sustainable growth across the agricultural value chain.
+                    </p>
+        
+                    <!-- Quote Marks -->
+                    <div class="text-orange-500 text-5xl leading-none text-right mt-4">”</div>
+        
+                    <!-- Name and Industry -->
+                    <p class="mt-6 text-orange-600 text-xl font-bold uppercase">Fitahiana</p>
+                    <p class="text-gray-500 text-md font-semibold">C.E.O</p>
+                </div>
+            </div>
+
+        </div>
+</body>
+</html>

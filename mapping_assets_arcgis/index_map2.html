@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.31/esri/themes/light/main.css">
+    <script defer src="https://js.arcgis.com/4.31/"></script>
+    <script
+      type="module"
+      src="https://js.arcgis.com/map-components/4.31/arcgis-map-components.esm.js"
+    ></script>
+    <!--script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script -->
+    <script defer src="./map_loader_.js" ></script>
+    <title>Document</title>
+</head>
+<body class="h-screen w-full bg-gradient-to-r from-green-500 to-blue-400">
+    <arcgis-map item-id="45b3b2fb35e94ab09381d0caa0da5946" center="46.172, -19.259" zoom="6">
+        <arcgis-sketch position="bottom-right" creation-mode="update"
+          layout="horizontal">
+        </arcgis-sketch>
+    </arcgis-map>
+    
+</body>
+</html>

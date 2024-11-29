@@ -1,0 +1,1 @@
+C:\Users\RaherimanantsoaMichel\.conda\envs\FINANCIAL\python.exe D:\fararano_mirindra_2\backend\main.py --token_kobo 329c78aec03a035aee03284b9a2cf5d877160e6f --json_url https://kf.kobotoolbox.org/api/v2/assets/aa2Y6j6SWhAqCTFCfZf2Na/data.json --db_name SPICES_TSIRO_GEODATABASE --table_name kobotest --user postgres --password Winneranthem11! --host localhost --port 5432
