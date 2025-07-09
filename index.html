@@ -309,7 +309,7 @@
     
         <div class="relative">
     
-            <button id="team-prev" aria-label="Previous"
+            <!-- <button id="team-prev" aria-label="Previous"
             class="absolute top-1/2 left-2 transform -translate-y-1/2 z-30
                     w-14 h-14 flex items-center justify-center
                     rounded-full
@@ -333,7 +333,7 @@
                     transition
                     hidden sm:hidden md:flex lg:hidden">
             <i class="fas fa-chevron-right"></i>
-            </button>
+            </button> -->
 
     
             <!-- Container scrollable -->
@@ -510,20 +510,6 @@
             } else {
                 nav.classList.remove('shadow-lg');
             }
-        });
-
-        const container = document.getElementById('team-container');
-        const prevBtn = document.getElementById('team-prev');
-        const nextBtn = document.getElementById('team-next');
-
-        const scrollAmount = 300; // nombre de pixels à défiler à chaque clic
-
-        prevBtn.addEventListener('click', () => {
-            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
-
-        nextBtn.addEventListener('click', () => {
-            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
     </script>
 </body>
