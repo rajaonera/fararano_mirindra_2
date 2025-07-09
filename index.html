@@ -10,6 +10,9 @@
     <script src="./assets/js/main.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="./assets/icons/logo-smartsaha.ico" type="image/x-icon" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
     <script>
         tailwind.config = {
@@ -26,8 +29,19 @@
                 }
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        });
+
     </script>
 </head>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <body class="bg-light text-dark">
     <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full z-10">
@@ -73,9 +87,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero-image min-h-screen flex items-center justify-center text-white pt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Revolutionize Agriculture with SmartSaha</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Empowering smallholder farmers to adapt to climate change and thrive through sustainable smart agriculture.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-right">Revolutionize Agriculture with SmartSaha</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-right">Empowering smallholder farmers to adapt to climate change and thrive through sustainable smart agriculture.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-right">
                 <a href="https://smart-saha.onrender.com/"><button class="bg-primary hover:bg-accent text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105">Discover the App</button></a>
             </div>
         </div>
@@ -84,16 +98,16 @@
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-left">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">About SmartSaha</h2>
                 <div class="w-24 h-1 bg-accent mx-auto"></div>
             </div>
             
             <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
+                <div class="md:w-1/2" data-aos="fade-right">
                     <img src="./assets/corn.jpg" alt="Farmers in Madagascar" class="rounded-lg shadow-xl w-full">
                 </div>
-                <div class="md:w-1/2">
+                <div class="md:w-1/2" data-aos="fade-left">
                     <h3 class="text-2xl font-semibold text-primary mb-4">Smallholder Farmers</h3>
                     <p class="text-gray-700 mb-6">Cornerstone of Africa's economy. Smallholder farmers are essential to Africa, producing up to 80% of its food, creating jobs for over 60% of the population, and protecting the environment.</p>
                     
@@ -112,7 +126,7 @@
 
         <section class="py-20 bg-light text-dark">
             <div class="max-w-6xl mx-auto px-6">
-              <div class="text-center mb-12">
+              <div class="text-center mb-12" data-aos="fade-left">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-primary">Our Core Services</h2>
                 <p class="mt-4 text-gray-600 max-w-xl mx-auto">Explore how SmartSaha transforms agriculture with intelligent tools.</p>
                 <div class="w-16 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
@@ -121,7 +135,7 @@
               <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- Precision Agriculture -->
-                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center">
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center" data-aos="fade-right">
                     <div class="text-primary text-4xl mb-4">
                     <i class="fas fa-seedling"></i>
                     </div>
@@ -131,7 +145,7 @@
                 </div>
                 
                 <!-- Agribusiness Tools -->
-                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center">
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center" data-aos="fade-down">
                     <div class="text-primary text-4xl mb-4">
                     <i class="fas fa-tools"></i>
                     </div>
@@ -141,7 +155,7 @@
                 </div>
                 
                 <!-- MRV System -->
-                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center">
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center" data-aos="fade-left">
                     <div class="text-primary text-4xl mb-4">
                     <i class="fas fa-chart-line"></i>
                     </div>
@@ -160,25 +174,25 @@
             <div id="precision-agri" class="mb-20">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <h3 class="text-2xl font-semibold text-primary mb-4">Precision Agriculture</h3>
-                        <p class="text-gray-700 mb-6">Empowering Crop Production with Satellite Imagery. Monitor land health, anticipate environmental risks, and gain tailored agricultural insights.</p>
+                        <h3 class="text-2xl font-semibold text-primary mb-4" data-aos="fade-left">Precision Agriculture</h3>
+                        <p class="text-gray-700 mb-6" data-aos="fade-left">Empowering Crop Production with Satellite Imagery. Monitor land health, anticipate environmental risks, and gain tailored agricultural insights.</p>
                         
                         <ul class="space-y-3 mb-6">
-                            <li class="flex items-start">
+                            <li class="flex items-start" data-aos="fade-right">
                                 <div class="flex-shrink-0 text-primary mt-1">
                                     <i class="fas fa-check-circle"></i>
                                 </div>
                                 <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Customizable: </span>
                                     From your fields to your fingertips, access a dynamic dashboard that brings your land to you. Gain smart insights to act efficiently.</p>
                             </li>
-                            <li class="flex items-start">
+                            <li class="flex items-start" data-aos="fade-right">
                                 <div class="flex-shrink-0 text-primary mt-1">
                                     <i class="fas fa-check-circle"></i>
                                 </div>
                                 <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Climate-Oriented: </span>
                                     We assist your crop production with a forecasting system to support your decisions and ensure sustainable high yield.</p>
                             </li>
-                            <li class="flex items-start">
+                            <li class="flex items-start" data-aos="fade-right">
                                 <div class="flex-shrink-0 text-primary mt-1">
                                     <i class="fas fa-check-circle"></i>
                                 </div>
@@ -187,9 +201,9 @@
                             </li>
                         </ul>
                         
-                        <button class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md text-sm font-medium transition duration-300">Learn More</button>
+                        <button class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md text-sm font-medium transition duration-300" data-aos="fade-right">Learn More</button>
                     </div>
-                    <div class="md:w-1/2">
+                    <div class="md:w-1/2" data-aos="fade-left">
                         <img src="./assets/satellite.png" alt="Precision Agriculture" class="rounded-lg shadow-xl w-full">
                     </div>
                 </div>
@@ -197,9 +211,9 @@
             
             <!-- Service List -->
             <div id="mvr" class="mb-20">
-                <h3 class="text-2xl font-semibold text-primary mb-8 text-center">M.R.V</h3>
+                <h3 class="text-2xl font-semibold text-primary mb-8 text-center" data-aos="fade-left">M.R.V</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-right">
                         <div class="text-primary text-4xl mb-4">
                             <i class="fas fa-chart-line"></i>
                         </div>
@@ -207,35 +221,35 @@
                         <p class="text-gray-600">We can implement an intuitive, user-friendly tool for seamless data collection.
                         </p>
                     </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-down">
                         <div class="text-primary text-4xl mb-4">
                             <i class="fas fa-tachometer-alt"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-3">User-friendly Dashboard</h4>
                         <p class="text-gray-600">Effortlessly understandable and optimized for informed decision-making.</p>
                     </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-left">
                         <div class="text-primary text-4xl mb-4">
                             <i class="fas fa-database"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-3">Database</h4>
                         <p class="text-gray-600">Robust storage secured by the strength of Postgres and PostGIS technology.</p>
                     </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-right">
                         <div class="text-primary text-4xl mb-4">
                             <i class="fas fa-globe-americas"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-3">Spatial Analysis</h4>
                         <p class="text-gray-600">Assisting your project with Geospatial Analysis, enhanced by Remote sensing and G.I.S solutions.</p>
                     </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-down">
                         <div class="text-primary text-4xl mb-4">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-3">Data Protection</h4>
                         <p class="text-gray-600">A well-designed personal workspace integrates top-tier data protection, creating an environment where privacy and productivity harmoniously coexist.</p>
                     </div>
-                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-left">
                         <div class="text-primary text-4xl mb-4">
                             <i class="fas fa-newspaper"></i>
                         </div>
@@ -247,44 +261,44 @@
             
             <!-- MRV System -->
             <div id="canva">
-                <h3 class="text-2xl font-semibold text-primary mb-8 text-center">How does our service work?</h3>
+                <h3 class="text-2xl font-semibold text-primary mb-8 text-center" data-aos="fade-left">How does our service work?</h3>
                 <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
+                    <div class="md:w-1/2" data-aos="fade-right">
                         <div class="video-container rounded-lg shadow-xl">
                             <iframe src="https://www.canva.com/design/DAGYzTIDa-c/YRVzquDVeA76WKafhB_Mbg/view?embed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="md:w-1/2">
-                        <p class="text-gray-700 mb-6">Our MRV system provides end-to-end monitoring, from field data collection to spatial analysis, all through an interactive and user-friendly dashboard.</p>
+                        <p class="text-gray-700 mb-6" data-aos="fade-left">Our MRV system provides end-to-end monitoring, from field data collection to spatial analysis, all through an interactive and user-friendly dashboard.</p>
                         
                         <div class="bg-white p-6 rounded-lg shadow-md mb-6">
-                            <h4 class="text-lg font-semibold text-primary mb-3">Key Benefits:</h4>
+                            <h4 class="text-lg font-semibold text-primary mb-3" data-aos="fade-left">Key Benefits:</h4>
                             <ul class="space-y-2">
-                                <li class="flex items-start">
+                                <li class="flex items-start" data-aos="fade-left">
                                     <div class="flex-shrink-0 text-primary mt-1">
                                         <i class="fas fa-check"></i>
                                     </div>
                                     <p class="ml-2 text-gray-700">Data collection through a mobile application</p>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start" data-aos="fade-left">
                                     <div class="flex-shrink-0 text-primary mt-1">
                                         <i class="fas fa-check"></i>
                                     </div>
                                     <p class="ml-2 text-gray-700">Automated analysis using AI-powered tools</p>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start" data-aos="fade-left">
                                     <div class="flex-shrink-0 text-primary mt-1">
                                         <i class="fas fa-check"></i>
                                     </div>
                                     <p class="ml-2 text-gray-700">Results displayed on a clear and intuitive dashboard</p>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start" data-aos="fade-left">
                                     <div class="flex-shrink-0 text-primary mt-1">
                                         <i class="fas fa-check"></i>
                                     </div>
                                     <p class="ml-2 text-gray-700">Reports that are generated and exportable</p>
                                 </li>
-                                <li class="flex items-start">
+                                <li class="flex items-start" data-aos="fade-left">
                                     <div class="flex-shrink-0 text-primary mt-1">
                                         <i class="fas fa-check"></i>
                                     </div>
@@ -303,9 +317,9 @@
     <section id="team" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Team</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">The passionate people behind SmartSaha</p>
-            <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-left">Our Team</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-left">The passionate people behind SmartSaha</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4" data-aos="fade-left"></div>
         </div>
     
         <div class="relative">
@@ -341,7 +355,7 @@
             <div id="team-container" class="flex gap-6 overflow-x-auto scroll-smooth px-2 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:overflow-visible">
             
             <!-- Team cards (min-w to allow scroll) -->
-            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative">
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative" data-aos="fade-right">
                 <img src="./assets/Michel.jpg" alt="Team Member" class="w-full h-64 object-cover">
                 <div class="p-6">
                 <h3 class="text-xl font-semibold text-primary">Michel Raherimenanantsoa</h3>
@@ -355,7 +369,7 @@
                 </div>
             </div>
     
-            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative">
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative" data-aos="fade-right">
                 <img src="./assets/Fitahiana.jpg" alt="Team Member" class="w-full h-64 object-cover">
                 <div class="p-6">
                 <h3 class="text-xl font-semibold text-primary">Fitahiana Rahetimazava</h3>
@@ -369,7 +383,7 @@
                 </div>
             </div>
     
-            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative">
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative"data-aos="fade-left">
                 <img src="./assets/Hasina.jpg" alt="Team Member" class="w-full h-64 object-cover">
                 <div class="p-6">
                 <h3 class="text-xl font-semibold text-primary">Hasina Andriatsitohaina</h3>
@@ -383,7 +397,7 @@
                 </div>
             </div>
     
-            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative">
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative"data-aos="fade-left">
                 <img src="./assets/Rindra.jpg" alt="Team Member" class="w-full h-64 object-cover">
                 <div class="p-6">
                 <h3 class="text-xl font-semibold text-primary">Rindra Ranaivosoa</h3>
@@ -400,7 +414,7 @@
             </div>
         </div>
     
-        <div class="text-center mt-12">
+        <div class="text-center mt-12" data-aos="fade-left">
             <button class="bg-primary hover:bg-accent text-white px-6 py-3 rounded-md text-sm font-medium transition duration-300">Join Our Team</button>
         </div>
         </div>
@@ -412,11 +426,11 @@
     <!-- CTA Section -->
     <section class="py-20 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Farm?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Join thousands of Malagasy farmers who are already benefiting from SmartSaha's digital agriculture solutions.</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-left">Ready to Transform Your Farm?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-aos="fade-left">Join thousands of Malagasy farmers who are already benefiting from SmartSaha's digital agriculture solutions.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://smart-saha.onrender.com/"><button class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105">Get Started Now</button></a>
-                <a href="./contact.html"><button class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105">Contact Our Team</button></a>
+                <a href="https://smart-saha.onrender.com/"><button class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105" data-aos="fade-left">Get Started Now</button></a>
+                <a href="./contact.html"><button class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105" data-aos="fade-left">Contact Our Team</button></a>
             </div>
         </div>
     </section>
@@ -425,7 +439,7 @@
     <footer id="contact" class="bg-dark text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div>
+                <div data-aos="fade-right">
                     <h1 class="text-3xl font-bold mb-4" style="color: #10b981; font-family: 'Quicksand', sans-serif;">SmartSaha</h1>
                     <p class="text-gray-400 mb-4">Empowering Malagasy farmers with smart digital solutions for sustainable agriculture.</p>
                     <div class="flex space-x-4">
@@ -434,7 +448,7 @@
                     </div>
                 </div>
                 
-                <div>
+                <div data-aos="fade-right">
                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
@@ -444,7 +458,7 @@
                     </ul>
                 </div>
                 
-                <div>
+                <div data-aos="fade-left">
                     <h3 class="text-lg font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-white">Precision Agriculture</a></li>
@@ -453,7 +467,7 @@
                     </ul>
                 </div>
                 
-                <div>
+                <div data-aos="fade-left">
                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
                     <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and farming tips.</p>
                     <form class="flex">
