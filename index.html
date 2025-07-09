@@ -3,90 +3,514 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./main.js"></script>
-    <script defer src="./main_to.js"></script>
-    <title>Landing Page</title>
+    <title>SmartSaha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <script src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/icons/logo-smartsaha.ico" type="image/x-icon" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#6b8f71',
+                        accent: '#4ecda3',
+                        light: '#f8f9fa',
+                        dark: '#1a1a1a',
+                        earth: '#8b5a2b',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gradient-to-r from-green-500 to-blue-400">
-    <!--header class="h-14 bg-gradient-to-r from-green-500 to-blue-400 text-white flex justify-between">
-        <nav class = "flex justify-start">
-            <a href="./index.html" class = "nav-log">
-                <img src="./assets/logo.png" alt="FARARANO_MIRINDRA" width="54" height="54" viewBox="0 0 54 54">
-            </a>
+<body class="bg-light text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-auto" src="./assets/logo.png" alt="SmartSaha Logo">
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="#team" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Team</a>
+                    <a href="./contact.html" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    <a href="https://smart-saha.onrender.com/"><button class="bg-primary hover:bg-accent text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Get Started</button></a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#team" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                <a href="./contact.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="https://smart-saha.onrender.com/"><button class="bg-primary hover:bg-accent text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2">Get Started</button></a>
+            </div>
+        </div>
+    </nav>
 
-        </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero-image min-h-screen flex items-center justify-center text-white pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Revolutionize Agriculture with SmartSaha</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Empowering smallholder farmers to adapt to climate change and thrive through sustainable smart agriculture.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://smart-saha.onrender.com/"><button class="bg-primary hover:bg-accent text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105">Discover the App</button></a>
+            </div>
+        </div>
+    </section>
 
-        <ul class="hidden md:flex space-x-8">
-            <li><a href="./index.html" class="hover:text-gray-300">Home</a></li>
-            <li><a href="./about.html" class="hover:text-gray-300">About</a></li>
-            <li><a href="./services.html" class="hover:text-gray-300">Services</a></li>
-            <li><a href="./marketplace/rindex_bis.html" class="hover:text-gray-300">Demo</a></li>
-            <li><a href="./contact.html" class="hover:text-gray-300">Contact</a></li>
-        </ul>
-
-</header-->
-    <header class="sticky top-0 bg-gradient-to-r from-green-500 to-blue-400">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">About SmartSaha</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
             
-          <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
-            <!--a href="#" class="text-2xl font-bold text-blue-600">Smart saha</a-->
-            <a href="./index.html" class = "nav-log">
-                <img src="./assets/logo.png" alt="FARARANO_MIRINDRA" width="54" height="54" viewBox="0 0 54 54">
-            </a>
-    
-            <!-- Desktop Navigation Links -->
-            <div class="hidden md:flex space-x-8">
-              <a href="./index.html" class="text-gray-600 hover:text-blue-600">Home</a>
-              <a href="./about.html" class="hover:text-gray-300">About</a>
-              <a href="./services.html" class="hover:text-gray-300">Services</a>
-              <a href="https://smart-saha.onrender.com/" class="hover:text-gray-300">Platform</a>
-              <a href="./contact.html" class="hover:text-gray-300">Contact</a>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="./assets/corn.jpg" alt="Farmers in Madagascar" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Smallholder Farmers</h3>
+                    <p class="text-gray-700 mb-6">Cornerstone of Africa's economy. Smallholder farmers are essential to Africa, producing up to 80% of its food, creating jobs for over 60% of the population, and protecting the environment.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-primary mb-4">The Problem</h3>
+                    <p class="text-gray-700 mb-6">Smallholder farmers face unpredictable weather, lack of market access, and unfair prices. These issues threaten their livelihood and food security.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Solution Overview</h3>
+                    <p class="text-gray-700 mb-6">We are building a platform connecting smallholder farmers with private sector actors. Using AI and precision tools, we help boost resilience and productivity.</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-50">
+
+        <section class="py-20 bg-light text-dark">
+            <div class="max-w-6xl mx-auto px-6">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-primary">Our Core Services</h2>
+                <p class="mt-4 text-gray-600 max-w-xl mx-auto">Explore how SmartSaha transforms agriculture with intelligent tools.</p>
+                <div class="w-16 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+              </div>
+          
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Precision Agriculture -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center">
+                  <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-seedling"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Precision Agriculture</h3>
+                  <p class="text-gray-600 text-sm mb-6">Use of sensors, forecasts, and analytics to optimize crop performance and resource use.</p>
+                  <button class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition">Learn More</button>
+                </div>
+          
+                <!-- Agribusiness Tools -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center">
+                  <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-tools"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Agribusiness Tools</h3>
+                  <p class="text-gray-600 text-sm mb-6">Digital tools that help businesses scale operations, manage logistics, and track performance.</p>
+                  <button class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition">Learn More</button>
+                </div>
+          
+                <!-- MRV System -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center">
+                  <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">M.R.V System</h3>
+                  <p class="text-gray-600 text-sm mb-6">Tools for Monitoring, Reporting, and Verification to support sustainable and efficient farming.</p>
+                  <button class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition">Learn More</button>
+                </div>
+          
+              </div>
+            </div>
+          </section>
+                  
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Precision Agriculture -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold text-primary mb-4">Precision Agriculture</h3>
+                        <p class="text-gray-700 mb-6">Empowering Crop Production with Satellite Imagery. Monitor land health, anticipate environmental risks, and gain tailored agricultural insights.</p>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 text-primary mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Customizable: </span>
+                                    From your fields to your fingertips, access a dynamic dashboard that brings your land to you. Gain smart insights to act efficiently.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 text-primary mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Climate-Oriented: </span>
+                                    We assist your crop production with a forecasting system to support your decisions and ensure sustainable high yield.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 text-primary mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Fully Featured: </span>
+                                    Everything you need to succeed and launch your dashboard, right out of the box. No extra configuration required./p>
+                            </li>
+                        </ul>
+                        
+                        <button class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md text-sm font-medium transition duration-300">Learn More</button>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="./assets/satellite.png" alt="Precision Agriculture" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service List -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-semibold text-primary mb-8 text-center">M.R.V</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Data collection</h4>
+                        <p class="text-gray-600">We can implement an intuitive, user-friendly tool for seamless data collection.
+                        </p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">User-friendly Dashboard</h4>
+                        <p class="text-gray-600">Effortlessly understandable and optimized for informed decision-making.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Database</h4>
+                        <p class="text-gray-600">Robust storage secured by the strength of Postgres and PostGIS technology.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Spatial Analysis</h4>
+                        <p class="text-gray-600">Assisting your project with Geospatial Analysis, enhanced by Remote sensing and G.I.S solutions.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Data Protection</h4>
+                        <p class="text-gray-600">A well-designed personal workspace integrates top-tier data protection, creating an environment where privacy and productivity harmoniously coexist.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Subscriptions</h4>
+                        <p class="text-gray-600">Free and paid subscriptions using Stripe.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MRV System -->
+            <div>
+                <h3 class="text-2xl font-semibold text-primary mb-8 text-center">How does our service work?</h3>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <div class="video-container rounded-lg shadow-xl">
+                            <iframe src="https://www.canva.com/design/DAGYzTIDa-c/YRVzquDVeA76WKafhB_Mbg/view?embed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="text-gray-700 mb-6">Our MRV system provides end-to-end monitoring, from field data collection to spatial analysis, all through an interactive and user-friendly dashboard.</p>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                            <h4 class="text-lg font-semibold text-primary mb-3">Key Benefits:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Data collection through a mobile application</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Automated analysis using AI-powered tools</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Results displayed on a clear and intuitive dashboard</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Reports that are generated and exportable</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Secured data access with permission levels</p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Team</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">The passionate people behind SmartSaha</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+        </div>
     
-            <!-- Mobile Menu Button -->
-            <button id="menu-toggle" class="md:hidden flex items-center text-gray-600 focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
+        <div class="relative">
+    
+            <button id="team-prev" aria-label="Previous"
+            class="absolute top-1/2 left-2 transform -translate-y-1/2 z-30
+                    w-14 h-14 flex items-center justify-center
+                    rounded-full
+                    bg-white/50 backdrop-blur-sm
+                    text-primary text-2xl
+                    shadow-lg
+                    hover:bg-white/70
+                    transition
+                    hidden sm:hidden md:flex lg:hidden">
+            <i class="fas fa-chevron-left"></i>
             </button>
-          </div>
+
+            <button id="team-next" aria-label="Next"
+            class="absolute top-1/2 right-2 transform -translate-y-1/2 z-30
+                    w-14 h-14 flex items-center justify-center
+                    rounded-full
+                    bg-white/50 backdrop-blur-sm
+                    text-primary text-2xl
+                    shadow-lg
+                    hover:bg-white/70
+                    transition
+                    hidden sm:hidden md:flex lg:hidden">
+            <i class="fas fa-chevron-right"></i>
+            </button>
+
     
-          <!-- Mobile Navigation Links -->
-          <div id="mobile-menu" class="hidden md:hidden flex flex-col mt-2 space-y-2 bg-gradient-to-r from-green-500 to-blue-400 rounded-lg p-4">
-            <a href="./index.html" class="text-gray-600 hover:text-blue-600">Home</a>
-              <a href="./about.html" class="hover:text-gray-300">About</a>
-              <a href="./services.html" class="hover:text-gray-300">Services</a>
-              <a href="https://platformsmartsaha.vercel.app/" class="hover:text-gray-300">Platform</a>
-              <a href="./contact.html" class="hover:text-gray-300">Contact</a>
-          </div>
-        </nav>
-      </header>
-    <!-- Jumbotron 
-    <section class="bg-[url('./assets/FARARANO_MIRINDRA.png')] bg-cover bg-center h-screen text-white">
-        <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold mb-4">FARARANO MIRINDRA</h1>
-                <p class="text-lg mb-8">Empower Smallholder Farmers to face Climate Change and improve livelihoods</p>
-                <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get Started</a>
+            <!-- Container scrollable -->
+            <div id="team-container" class="flex gap-6 overflow-x-auto scroll-smooth px-2 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:overflow-visible">
+            
+            <!-- Team cards (min-w to allow scroll) -->
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative">
+                <img src="./assets/Michel.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Michel Raherimenanantsoa</h3>
+                <p class="text-gray-600 mb-4">Geospatial & Agricultural Data Scientist</p>
+                <p class="text-gray-700 text-sm">Expert in optimizing agricultural practices using geospatial data and technology.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="#" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white hover:text-accent"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative">
+                <img src="./assets/Fitahiana.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Fitahiana Rahetimazava</h3>
+                <p class="text-gray-600 mb-4">Business & Technology Strategist</p>
+                <p class="text-gray-700 text-sm">Specialized in building scalable digital solutions and business strategies for agricultural innovation.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="#" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white hover:text-accent"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative">
+                <img src="./assets/Hasina.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Hasina Andriatsitohaina</h3>
+                <p class="text-gray-600 mb-4">Value Chain & Impact Investment Specialist</p>
+                <p class="text-gray-700 text-sm">Focuses on strengthening agricultural value chains and driving sustainable impact investments.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="#" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white hover:text-accent"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative">
+                <img src="./assets/Rindra.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Rindra Ranaivosoa</h3>
+                <p class="text-gray-600 mb-4">Software Engineer & System Architect</p>
+                <p class="text-gray-700 text-sm">Designs and develops user-friendly platforms for agricultural digital transformation.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="#" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white hover:text-accent"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
             </div>
         </div>
-    -->
-    <div class="bg-cover bg-no-repeat text-center h-screen text-white" style="background-image: url('./assets/FARARANO.png');">
-        <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold mb-4">SMART SAHA</h1>
-                <p class="text-lg mb-8">Empower Smallholder Farmers to face Climate Change and improve livelihoods</p>
-                <a href="./about.html" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id = "get_started">Get Started</a>
+    
+        <div class="text-center mt-12">
+            <button class="bg-primary hover:bg-accent text-white px-6 py-3 rounded-md text-sm font-medium transition duration-300">Join Our Team</button>
+        </div>
+        </div>
+    </section>
+  
+  
+
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Farm?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join thousands of Malagasy farmers who are already benefiting from SmartSaha's digital agriculture solutions.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://smart-saha.onrender.com/"><button class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105">Get Started Now</button></a>
+                <a href="./contact.html"><button class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105">Contact Our Team</button></a>
             </div>
         </div>
-    </div>
-    <iframe class="w-full h-screen" src="./team.html"></iframe>
-    <iframe class="w-full h-screen" src="./overview_services.html"></iframe>
-    <footer class="bg-gradient-to-r from-green-500 to-blue-400 text-center text-white">
-        (c) SMART SAHA - Crystallide, All right Reserved
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h1 class="text-3xl font-bold mb-4" style="color: #10b981; font-family: 'Quicksand', sans-serif;">SmartSaha</h1>
+                    <p class="text-gray-400 mb-4">Empowering Malagasy farmers with smart digital solutions for sustainable agriculture.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white">Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Precision Agriculture</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">MRV System</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Marketplace</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and farming tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary w-full">
+                        <button type="submit" class="bg-primary hover:bg-accent text-white px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 SmartSaha. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
 </body>
 </html>

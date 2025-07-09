@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.team-card:hover .team-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0%;
+    background-color: #10b981;
+    transition: width 0.3s ease;
+}
+
+.nav-link:focus,
+.nav-link:focus-visible {
+    color: #10b981;
+    font-weight: 600;
+    outline: none;
+}
+
+.nav-link:focus::after,
+.nav-link:focus-visible::after {
+    width: 100%;
+}
+
+#team .overflow-x-auto::-webkit-scrollbar {
+    height: 8px;
+}
+#team .overflow-x-auto::-webkit-scrollbar-thumb {
+    background-color: #10b981;
+    border-radius: 4px;
+}
+#team .overflow-x-auto::-webkit-scrollbar-track {
+    background: #f0fdf4;
+}
+
+@media (max-width: 768px) {
+    #team-prev, #team-next {
+        display: block !important;
+    }
+}
+
+
