@@ -27,6 +27,26 @@
             }
         }
     </script>
+
+    <style>
+        #team .overflow-x-auto::-webkit-scrollbar {
+            height: 8px;
+        }
+        #team .overflow-x-auto::-webkit-scrollbar-thumb {
+            background-color: #10b981;
+            border-radius: 4px;
+        }
+        #team .overflow-x-auto::-webkit-scrollbar-track {
+            background: #f0fdf4;
+        }
+
+        @media (max-width: 768px) {
+            #team-prev, #team-next {
+                display: block !important;
+            }
+        }
+    </style>
+    
 </head>
 <body class="bg-light text-dark">
     <!-- Navigation -->
