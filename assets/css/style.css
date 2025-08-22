@@ -6,10 +6,33 @@ body {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../hero.jpg');
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('../hero.jpg') center/cover no-repeat;
 }
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(16, 180, 129, 0.8); 
+    backdrop-filter: blur(6px); 
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 0;
+}
+
+
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    33%  { transform: translateX(-100%); }
+    66%  { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+  }
+  .animate-scroll {
+    display: flex;
+    animation: scroll 12s infinite linear;
+  }
 
 .service-card:hover {
     transform: translateY(-10px);
@@ -48,13 +71,13 @@ body {
     bottom: -2px;
     height: 2px;
     width: 0%;
-    background-color: #10b981;
+    background-color: rgb(248, 248, 248);
     transition: width 0.3s ease;
 }
 
 .nav-link:focus,
 .nav-link:focus-visible {
-    color: #10b981;
+    color: #f9f9f9;
     font-weight: 600;
     outline: none;
 }
@@ -68,7 +91,7 @@ body {
     height: 8px;
 }
 #team .overflow-x-auto::-webkit-scrollbar-thumb {
-    background-color: #10b981;
+    background-color: rgb(16, 180, 129);
     border-radius: 4px;
 }
 #team .overflow-x-auto::-webkit-scrollbar-track {

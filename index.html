@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <script src="./assets/js/main.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="icon" href="./assets/icons/logo-smartsaha.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -19,7 +19,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#10b981',
+                        primary: '#10b481',
                         secondary: '#6b8f71',
                         accent: '#4ecda3',
                         light: '#f8f9fa',
@@ -41,59 +41,144 @@
 </head>
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-<body class="bg-light text-dark">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-10">
+
+<body class="bg-light text-dark overflow-x-hidden">
+
+    <nav class="fixed w-full z-40 bg-cover bg-center bg-no-repeat" 
+        style="background-image: url('./assets/4x/background-header@4x.png');">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <img class="h-8 w-auto" src="./assets/logo.png" alt="SmartSaha Logo">
+            <div class="flex justify-between items-center relative py-4">
+
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-10 w-auto rounded-md mt-4" src="./assets/logo smartsaha_HD.png" alt="SmartSaha Logo">
+                </div>
+
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <div class="relative flex items-center justify-center px-6 py-2">
+                        <h1 class="text-[#10b481] text-3xl font-bold" style="font-family: 'Quicksand', sans-serif;">
+                            SmartSaha
+                        </h1>
                     </div>
                 </div>
-                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About</a>
-                    <a href="#services" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                    <a href="#team" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Team</a>
-                    <a href="./contact.html" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                    <a href="https://smart-saha.onrender.com/"><button class="bg-primary hover:bg-accent text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Get Started</button></a>
+
+                <div class="hidden lg:ml-6 lg:flex lg:items-center lg:space-x-4 text-white">
+                    <a href="#about" class="nav-link hover:text-[#f9f9f9] px-3 py-4 rounded-md text-sm font-medium">About</a>
+                    <a href="#services" class="nav-link hover:text-[#f9f9f9] px-3 py-4 rounded-md text-sm font-medium">Services</a>
+                    <a href="#team" class="nav-link hover:text-[#f9f9f9] px-3 py-4 rounded-md text-sm font-medium">Team</a>
+                    <a href="./contact.html" class="nav-link hover:text-[#f9f9f9] px-3 py-4 rounded-md text-sm font-medium">Contact</a>
                 </div>
-                <div class="-mr-2 flex items-center md:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
+
+                <div class="-mr-2 flex items-center lg:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-lg text-white hover:text-[#f9f9f9] focus:outline-none">
+                      <span class="sr-only">Open main menu</span>
+                      <!-- Icône burger -->
+                      <svg id="burger-icon" class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                      <!-- Icône croix, cachée par défaut -->
+                      <svg id="close-icon" class="hidden h-8 w-8 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M6 18L18 6" />
+                      </svg>
                     </button>
                 </div>
             </div>
         </div>
-        
-        <!-- Mobile menu -->
-        <div class="hidden md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-                <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Home</a>
+
+        <div class="hidden lg:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#f9f9f9]">
                 <a href="#about" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
                 <a href="#services" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Services</a>
                 <a href="#team" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Team</a>
                 <a href="./contact.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-                <a href="https://smart-saha.onrender.com/"><button class="bg-primary hover:bg-accent text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2">Get Started</button></a>
+                <a href="https://smart-saha.onrender.com/">
+                    <button class="bg-primary hover:bg-accent text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2">Get Started</button>
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-image min-h-screen flex items-center justify-center text-white pt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up">Revolutionize Agriculture with SmartSaha</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up">Empowering smallholder farmers to adapt to climate change and thrive through sustainable smart agriculture.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up">
-                <a href="https://smart-saha.onrender.com/"><button class="bg-primary hover:bg-accent text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105">Discover the App</button></a>
+    <section id="hero" class="hero-image relative w-full h-screen grid grid-cols-1 md:grid-cols-2 pt-20">
+
+        <div class="flex items-center justify-center h-full w-full font-semibold">
+      
+          <!-- Desktop (escalier) -->
+          <div class="hidden lg:flex relative items-center justify-center w-11/12 uppercase gap-6">
+            
+            <div class="relative z-20 -translate-y-24 translate-x-10">
+              <span class="absolute top-3 left-3 bg-black bg-opacity-20 backdrop-blur-sm text-white text-lg px-3 py-1 rounded">
+                Fire & Drought Alerts
+              </span>
+              <img src="./assets/evaluation.jpg" alt="Agriculture de précision" 
+                   class="w-72 h-80 object-cover rounded-xl shadow-xl transition-transform hover:scale-105">
+            </div>                
+      
+            <div class="relative z-10 -mx-6">
+              <img src="./assets/precision-agriculture.jpg" alt="Fire & Drought Alerts" 
+                   class="w-96 h-96 object-cover rounded-xl shadow-2xl transition-transform hover:scale-105">
+              <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-20 backdrop-blur-sm text-white text-lg px-3 py-1 rounded">
+                Precision Agriculture
+              </span>
             </div>
+      
+            <div class="relative z-20 translate-y-20 -translate-x-6">
+              <img src="./assets/market-access.jpg" alt="Market Access" 
+                   class="w-72 h-80 object-cover rounded-xl shadow-xl transition-transform hover:scale-105">
+              <span class="absolute bottom-3 left-3 bg-black bg-opacity-20 backdrop-blur-sm text-white text-lg px-3 py-1 rounded">
+                Market Access
+              </span>
+            </div>
+          </div>
+      
+          <!-- iPad et Mobile : Slider moderne -->
+          <div class="block md:flex lg:hidden w-full px-4">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+      
+                <div class="swiper-slide flex flex-col items-center gap-2">
+                  <img src="./assets/evaluation.jpg" class="w-full h-96 object-cover rounded-xl shadow-lg transition-transform hover:scale-105" alt="Fire & Drought Alerts">
+                  <span class="mt-2 bg-black bg-opacity-20 backdrop-blur-sm text-white text-sm px-3 py-1 rounded">
+                    Fire & Drought Alerts
+                  </span>
+                </div>
+      
+                <div class="swiper-slide flex flex-col items-center gap-2">
+                  <img src="./assets/precision-agriculture.jpg" class="w-full h-96 object-cover rounded-xl shadow-xl transition-transform hover:scale-105" alt="Precision Agriculture">
+                  <span class="mt-2 bg-black bg-opacity-20 backdrop-blur-sm text-white text-sm px-3 py-1 rounded">
+                    Precision Agriculture
+                  </span>
+                </div>
+      
+                <div class="swiper-slide flex flex-col items-center gap-2">
+                  <img src="./assets/market-access.jpg" class="w-full h-96 object-cover rounded-xl shadow-lg transition-transform hover:scale-105" alt="Market Access">
+                  <span class="mt-2 bg-black bg-opacity-20 backdrop-blur-sm text-white text-sm px-3 py-1 rounded">
+                    Market Access
+                  </span>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+      
         </div>
-    </section>
+      
+        <!-- Texte et bouton -->
+        <div class="flex flex-col justify-center px-6 md:px-16 mt-6 md:mt-0 text-center md:text-left z-10 relative">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white">
+              Revolutionize Agriculture with SmartSaha
+            </h1>
+            <p class="hidden md:block text-sm md:text-lg mb-6 md:mb-8 text-gray-200">
+              Empowering smallholder farmers to adapt to climate change and thrive through sustainable smart agriculture.
+            </p>
+            <a href="https://smart-saha.onrender.com/">
+              <button class="bg-white bg-opacity-90 hover:bg-opacity-100 px-6 md:px-8 py-2 md:py-3 rounded-lg text-base md:text-lg font-bold transition transform hover:scale-105 text-[#10b481] cursor-pointer">
+                Get Started
+              </button>
+            </a>            
+        </div>
+      
+      </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
@@ -141,7 +226,7 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Precision Agriculture</h3>
                     <p class="text-gray-600 text-sm mb-6">Use of sensors, forecasts, and analytics to optimize crop performance and resource use.</p>
-                    <a href="#precision-agri" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition">Learn More</a>
+                    <a href="#precision-agri" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md font-semibold transition">Learn More</a>
                 </div>
                 
                 <!-- Agribusiness Tools -->
@@ -151,7 +236,7 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Agribusiness Tools</h3>
                     <p class="text-gray-600 text-sm mb-6">Digital tools that help businesses scale operations, manage logistics, and track performance.</p>
-                    <a href="#mvr" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition">Learn More</a>
+                    <a href="#mvr" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md font-semibold transition">Learn More</a>
                 </div>
                 
                 <!-- MRV System -->
@@ -161,7 +246,7 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-2">M.R.V System</h3>
                     <p class="text-gray-600 text-sm mb-6">Tools for Monitoring, Reporting, and Verification to support sustainable and efficient farming.</p>
-                    <a href="#canva" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition">Learn More</a>
+                    <a href="#canva" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md font-semibold transition">Learn More</a>
                 </div>
   
           
@@ -324,33 +409,6 @@
     
         <div class="relative">
     
-            <!-- <button id="team-prev" aria-label="Previous"
-            class="absolute top-1/2 left-2 transform -translate-y-1/2 z-30
-                    w-14 h-14 flex items-center justify-center
-                    rounded-full
-                    bg-white/50 backdrop-blur-sm
-                    text-primary text-2xl
-                    shadow-lg
-                    hover:bg-white/70
-                    transition
-                    hidden sm:hidden md:flex lg:hidden">
-            <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <button id="team-next" aria-label="Next"
-            class="absolute top-1/2 right-2 transform -translate-y-1/2 z-30
-                    w-14 h-14 flex items-center justify-center
-                    rounded-full
-                    bg-white/50 backdrop-blur-sm
-                    text-primary text-2xl
-                    shadow-lg
-                    hover:bg-white/70
-                    transition
-                    hidden sm:hidden md:flex lg:hidden">
-            <i class="fas fa-chevron-right"></i>
-            </button> -->
-
-    
             <!-- Container scrollable -->
             <div id="team-container" class="flex gap-6 overflow-x-auto scroll-smooth px-2 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:overflow-visible">
             
@@ -415,14 +473,10 @@
         </div>
     
         <div class="text-center mt-12" data-aos="fade-up">
-            <!-- <button class="bg-primary hover:bg-accent text-white px-6 py-3 rounded-md text-sm font-medium transition duration-300">Join Our Team</button> -->
         </div>
         </div>
     </section>
   
-  
-
-
     <!-- CTA Section -->
     <section class="py-20 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -449,9 +503,9 @@
                 Empowering Malagasy farmers with smart digital solutions for sustainable agriculture.
             </p>
             <div class="flex space-x-4">
-                <!-- <a href="#!" class="text-gray-400 hover:text-white" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61572257526521" class="text-gray-400 hover:text-white" aria-label="Facebook">
                 <i class="fab fa-facebook-f"></i>
-                </a> -->
+                </a>
                 <a href="https://www.linkedin.com/company/smartsaha/posts/?feedView=all" class="text-gray-400 hover:text-white" aria-label="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
                 </a>
@@ -479,26 +533,8 @@
             </ul>
             </div>
             
-            <!-- Newsletter (optionnel, commenté) -->
-            <!-- 
-            <div data-aos="fade-up">
-            <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
-            <p class="text-gray-400 mb-4">
-                Subscribe to our newsletter for the latest updates and farming tips.
-            </p>
-            <form class="flex">
-                <input type="email" placeholder="Your email" 
-                    class="bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary w-full" />
-                <button type="submit" class="bg-primary hover:bg-accent text-white px-4 py-2 rounded-r-md">
-                <i class="fas fa-paper-plane"></i>
-                </button>
-            </form>
-            </div>
-            -->
-            
         </div>
     
-        <!-- Footer Bottom -->
         <div class="pt-8 border-t border-gray-800">
             <div class="flex flex-col md:flex-row justify-between items-center">
             <p class="text-gray-400 text-sm mb-4 md:mb-0">
@@ -514,18 +550,31 @@
     
         </div>
     </footer>
-  
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      // Mobile menu toggle
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 3000, // 10 secondes
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+        centeredSlides: true,
+      });
+
       const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const closeIcon = document.getElementById('close-icon');
+        const burgerIcon = document.getElementById('burger-icon');
         
         mobileMenuButton.addEventListener('click', function() {
             mobileMenu.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');      
+            burgerIcon.classList.toggle('hidden');
+
         });
         
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -534,14 +583,14 @@
                     behavior: 'smooth'
                 });
                 
-                // Close mobile menu if open
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
+                    burgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
                 }
             });
         });
         
-        // Add shadow to navbar on scroll
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
             if (window.scrollY > 10) {
@@ -550,6 +599,7 @@
                 nav.classList.remove('shadow-lg');
             }
         });
+
     </script>
 </body>
 </html>

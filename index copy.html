@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSaha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <script src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/icons/logo-smartsaha.ico" type="image/x-icon" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#6b8f71',
+                        accent: '#4ecda3',
+                        light: '#f8f9fa',
+                        dark: '#1a1a1a',
+                        earth: '#8b5a2b',
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        });
+
+    </script>
+</head>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<body class="bg-light text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-auto" src="./assets/logo.png" alt="SmartSaha Logo">
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="#team" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Team</a>
+                    <a href="./contact.html" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    <a href="https://smart-saha.onrender.com/"><button class="bg-primary hover:bg-accent text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Get Started</button></a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="#home" class="nav-link text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#team" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                <a href="./contact.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="https://smart-saha.onrender.com/"><button class="bg-primary hover:bg-accent text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2">Get Started</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SLIDER (3 slides, auto + slide animation) -->
+    <section id="heroSlider" class="relative overflow-hidden w-full h-screen">
+
+        <!-- Track -->
+        <div id="sliderTrack"
+            class="flex h-full transition-transform duration-700 ease-in-out will-change-transform">
+    
+        <!-- Slide 1 : Hero -->
+        <div class="hero-image w-full h-full flex-none flex items-center justify-center bg-cover bg-center text-white">
+            <div class="max-w-3xl text-center px-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Revolutionize Agriculture with SmartSaha</h1>
+            <p class="text-xl md:text-2xl mb-8">
+                Empowering smallholder farmers to adapt to climate change and thrive through sustainable smart agriculture.
+            </p>
+            <a href="https://smart-saha.onrender.com/">
+                <button class="bg-primary hover:bg-accent px-8 py-3 rounded-md text-lg font-medium transition transform hover:scale-105">
+                Get Started
+                </button>
+            </a>
+            </div>
+        </div>
+    
+        <!-- <div class="w-full h-full flex-none flex flex-col md:flex-row items-center justify-center bg-gray-900 text-white">
+            <img src="./assets/hero1.jpg"
+                alt="Agriculture de précision"
+                class="w-full md:w-1/2 h-full object-cover">
+            <div class="p-8 md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Agriculture de Précision</h2>
+            <p class="text-lg mb-6">Cartographie interactive, suivi géospatial des parcelles, imagerie satellite.</p>
+            <a href="https://www.smart-saha.com/precision">
+                <button class="bg-primary hover:bg-accent px-8 py-3 rounded-md text-lg font-medium transition transform hover:scale-105">
+                Découvrir
+                </button>
+            </a>
+            </div>
+        </div>
+    
+        <div class="w-full h-full flex-none flex flex-col md:flex-row items-center justify-center bg-gray-800 text-white">
+            <div class="p-8 md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Marketplace Agricole</h2>
+            <p class="text-lg mb-6">Achetez & vendez vos produits en toute confiance sur SmartSaha.</p>
+            <a href="https://www.smart-saha.com/marketplace">
+                <button class="bg-primary hover:bg-accent px-8 py-3 rounded-md text-lg font-medium transition transform hover:scale-105">
+                Aller au Marketplace
+                </button>
+            </a>
+            </div>
+            <img src="./assets/corn.jpg"
+                alt="Marketplace"
+                class="w-full md:w-1/2 h-full object-cover">
+        </div>
+    
+        </div>
+    
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 transform flex space-x-3">
+        <button data-dot class="w-3 h-3 rounded-full bg-white opacity-100"></button>
+        <button data-dot class="w-3 h-3 rounded-full bg-white opacity-50"></button>
+        <button data-dot class="w-3 h-3 rounded-full bg-white opacity-50"></button>
+        </div> -->
+    
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">About SmartSaha</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-up">
+                    <img src="./assets/Agribio.gif" alt="Farmers in Madagascar" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-up">
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Smallholder Farmers</h3>
+                    <p class="text-gray-700 mb-6">Cornerstone of Africa's economy. Smallholder farmers are essential to Africa, producing up to 80% of its food, creating jobs for over 60% of the population, and protecting the environment.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-primary mb-4">The Problem</h3>
+                    <p class="text-gray-700 mb-6">Smallholder farmers face unpredictable weather, lack of market access, and unfair prices. These issues threaten their livelihood and food security.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Solution Overview</h3>
+                    <p class="text-gray-700 mb-6">We are building a platform connecting smallholder farmers with private sector actors. Using AI and precision tools, we help boost resilience and productivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-50">
+
+        <section class="py-20 bg-light text-dark">
+            <div class="max-w-6xl mx-auto px-6">
+              <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-primary">Our Core Services</h2>
+                <p class="mt-4 text-gray-600 max-w-xl mx-auto">Explore how SmartSaha transforms agriculture with intelligent tools.</p>
+                <div class="w-16 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+              </div>
+          
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Precision Agriculture -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center" data-aos="fade-up">
+                    <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Precision Agriculture</h3>
+                    <p class="text-gray-600 text-sm mb-6">Use of sensors, forecasts, and analytics to optimize crop performance and resource use.</p>
+                    <a href="#precision-agri" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition">Learn More</a>
+                </div>
+                
+                <!-- Agribusiness Tools -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center" data-aos="fade-up">
+                    <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Agribusiness Tools</h3>
+                    <p class="text-gray-600 text-sm mb-6">Digital tools that help businesses scale operations, manage logistics, and track performance.</p>
+                    <a href="#mvr" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition">Learn More</a>
+                </div>
+                
+                <!-- MRV System -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center" data-aos="fade-up">
+                    <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">M.R.V System</h3>
+                    <p class="text-gray-600 text-sm mb-6">Tools for Monitoring, Reporting, and Verification to support sustainable and efficient farming.</p>
+                    <a href="#canva" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition">Learn More</a>
+                </div>
+  
+          
+              </div>
+            </div>
+          </section>
+                  
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Precision Agriculture -->
+            <div id="precision-agri" class="mb-20">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold text-primary mb-4" data-aos="fade-up">Precision Agriculture</h3>
+                        <p class="text-gray-700 mb-6" data-aos="fade-up">Empowering Crop Production with Satellite Imagery. Monitor land health, anticipate environmental risks, and gain tailored agricultural insights.</p>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start" data-aos="fade-left">
+                                <div class="flex-shrink-0 text-primary mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Customizable: </span>
+                                    From your fields to your fingertips, access a dynamic dashboard that brings your land to you. Gain smart insights to act efficiently.</p>
+                            </li>
+                            <li class="flex items-start" data-aos="fade-left">
+                                <div class="flex-shrink-0 text-primary mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Climate-Oriented: </span>
+                                    We assist your crop production with a forecasting system to support your decisions and ensure sustainable high yield.</p>
+                            </li>
+                            <li class="flex items-start" data-aos="fade-left">
+                                <div class="flex-shrink-0 text-primary mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Fully Featured: </span>
+                                    Everything you need to succeed and launch your dashboard, right out of the box. No extra configuration required.
+                                </p>
+                            </li>
+                        </ul>
+                        <button class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md text-sm font-medium transition duration-300" data-aos="fade-up">Learn More</button>
+                    </div>
+                    <div class="md:w-1/2" data-aos="fade-up">
+                        <img src="./assets/satellite.png" alt="Precision Agriculture" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service List -->
+            <div id="mvr" class="mb-20">
+                <h3 class="text-2xl font-semibold text-primary mb-8 text-center" data-aos="fade-up">Measurement, Reporting, and Verification.</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Data collection</h4>
+                        <p class="text-gray-600">We can implement an intuitive, user-friendly tool for seamless data collection.
+                        </p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">User-friendly Dashboard</h4>
+                        <p class="text-gray-600">Effortlessly understandable and optimized for informed decision-making.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Database</h4>
+                        <p class="text-gray-600">Robust storage secured by the strength of Postgres and PostGIS technology.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Spatial Analysis</h4>
+                        <p class="text-gray-600">Assisting your project with Geospatial Analysis, enhanced by Remote sensing and G.I.S solutions.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Data Protection</h4>
+                        <p class="text-gray-600">A well-designed personal workspace integrates top-tier data protection, creating an environment where privacy and productivity harmoniously coexist.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Subscriptions</h4>
+                        <p class="text-gray-600">Free and paid subscriptions using Stripe.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MRV System -->
+            <div id="canva">
+                <h3 class="text-2xl font-semibold text-primary mb-8 text-center" data-aos="fade-up">How does our service work?</h3>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2" data-aos="fade-up">
+                        <div class="video-container rounded-lg shadow-xl">
+                            <iframe src="https://www.canva.com/design/DAGYzTIDa-c/YRVzquDVeA76WKafhB_Mbg/view?embed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="text-gray-700 mb-6" data-aos="fade-up">Our MRV system provides end-to-end monitoring, from field data collection to spatial analysis, all through an interactive and user-friendly dashboard.</p>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                            <h4 class="text-lg font-semibold text-primary mb-3" data-aos="fade-up">Key Benefits:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Data collection through a mobile application</p>
+                                </li>
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Automated analysis using AI-powered tools</p>
+                                </li>
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Results displayed on a clear and intuitive dashboard</p>
+                                </li>
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Reports that are generated and exportable</p>
+                                </li>
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Secured data access with permission levels</p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">Our Team</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up">The passionate people behind SmartSaha</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4" data-aos="fade-up"></div>
+        </div>
+    
+        <div class="relative">
+    
+            <!-- <button id="team-prev" aria-label="Previous"
+            class="absolute top-1/2 left-2 transform -translate-y-1/2 z-30
+                    w-14 h-14 flex items-center justify-center
+                    rounded-full
+                    bg-white/50 backdrop-blur-sm
+                    text-primary text-2xl
+                    shadow-lg
+                    hover:bg-white/70
+                    transition
+                    hidden sm:hidden md:flex lg:hidden">
+            <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <button id="team-next" aria-label="Next"
+            class="absolute top-1/2 right-2 transform -translate-y-1/2 z-30
+                    w-14 h-14 flex items-center justify-center
+                    rounded-full
+                    bg-white/50 backdrop-blur-sm
+                    text-primary text-2xl
+                    shadow-lg
+                    hover:bg-white/70
+                    transition
+                    hidden sm:hidden md:flex lg:hidden">
+            <i class="fas fa-chevron-right"></i>
+            </button> -->
+
+    
+            <!-- Container scrollable -->
+            <div id="team-container" class="flex gap-6 overflow-x-auto scroll-smooth px-2 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:overflow-visible">
+            
+            <!-- Team cards (min-w to allow scroll) -->
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative" data-aos="fade-up">
+                <img src="./assets/Michel.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Michel Raherimenanantsoa</h3>
+                <p class="text-gray-600 mb-4">Geospatial & Agricultural Data Scientist</p>
+                <p class="text-gray-700 text-sm">Expert in optimizing agricultural practices using geospatial data and technology.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="https://www.linkedin.com/in/michel-raherimanantsoa-2bab19a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <!-- <a href="#" class="text-white hover:text-accent"><i class="fab fa-twitter"></i></a> -->
+                <a href="mailto:smartsaapp@gmail.com?subject=Demande%20d'information&body=Bonjour%2C%20je%20souhaite%20..." class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative" data-aos="fade-up">
+                <img src="./assets/Fitahiana.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Fitahiana Rahetimazava</h3>
+                <p class="text-gray-600 mb-4">Business & Technology Strategist</p>
+                <p class="text-gray-700 text-sm">Specialized in building scalable digital solutions and business strategies for agricultural innovation.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="https://www.linkedin.com/in/fitahiana-rahetimazava-ramangamihanta-b77758145/" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <!-- <a href="#" class="text-white hover:text-accent"><i class="fab fa-twitter"></i></a> -->
+                <a href="mailto:smartsaapp@gmail.com?subject=Demande%20d'information&body=Bonjour%2C%20je%20souhaite%20..." class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative"data-aos="fade-up">
+                <img src="./assets/Hasina.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Hasina Andriatsitohaina</h3>
+                <p class="text-gray-600 mb-4">Value Chain & Impact Investment Expert</p>
+                <p class="text-gray-700 text-sm">Focuses on strengthening agricultural value chains and driving sustainable impact investments.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="https://www.linkedin.com/in/hasina-henintsoa-andriatsitohaina-2b2042a6/" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <!-- <a href="#" class="text-white hover:text-accent"><i class="fab fa-twitter"></i></a> -->
+                <a href="mailto:smartsaapp@gmail.com?subject=Demande%20d'information&body=Bonjour%2C%20je%20souhaite%20..." class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative"data-aos="fade-up">
+                <img src="./assets/Rindra.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Rindra <p>Ranaivosoa</p></h3>
+                <p class="text-gray-600 mb-4">Software Engineer & System Architect</p>
+                <p class="text-gray-700 text-sm">Designs and develops user-friendly platforms for agricultural digital transformation.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="https://www.linkedin.com/in/g%C3%A9rald-rindra-ranaivosoa-454549202/" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <!-- <a href="#" class="text-white hover:text-accent"><i class="fab fa-twitter"></i></a> -->
+                <a href="mailto:smartsaapp@gmail.com?subject=Demande%20d'information&body=Bonjour%2C%20je%20souhaite%20..." class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            </div>
+        </div>
+    
+        <div class="text-center mt-12" data-aos="fade-up">
+            <!-- <button class="bg-primary hover:bg-accent text-white px-6 py-3 rounded-md text-sm font-medium transition duration-300">Join Our Team</button> -->
+        </div>
+        </div>
+    </section>
+  
+  
+
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Ready to Transform Your Farm?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-aos="fade-up">Join thousands of Malagasy farmers who are already benefiting from SmartSaha's digital agriculture solutions.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://smart-saha.onrender.com/"><button class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105" data-aos="fade-up">Get Started Now</button></a>
+                <a href="./contact.html"><button class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105" data-aos="fade-up">Contact Our Team</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            
+            <div data-aos="fade-up">
+            <h1 class="text-3xl font-bold mb-4" style="color: #10b981; font-family: 'Quicksand', sans-serif;">
+                SmartSaha
+            </h1>
+            <p class="text-gray-400 mb-4">
+                Empowering Malagasy farmers with smart digital solutions for sustainable agriculture.
+            </p>
+            <div class="flex space-x-4">
+                <!-- <a href="#!" class="text-gray-400 hover:text-white" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+                </a> -->
+                <a href="https://www.linkedin.com/company/smartsaha/posts/?feedView=all" class="text-gray-400 hover:text-white" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div data-aos="fade-up">
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+                <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                <li><a href="#team" class="text-gray-400 hover:text-white">Our Team</a></li>
+            </ul>
+            </div>
+            
+            <!-- Services -->
+            <div data-aos="fade-up">
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+                <li><a href="#!" class="text-gray-400 hover:text-white">Precision Agriculture</a></li>
+                <li><a href="#!" class="text-gray-400 hover:text-white">MRV System</a></li>
+                <li><a href="#!" class="text-gray-400 hover:text-white">Marketplace</a></li>
+            </ul>
+            </div>
+            
+            <!-- Newsletter (optionnel, commenté) -->
+            <!-- 
+            <div data-aos="fade-up">
+            <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+                Subscribe to our newsletter for the latest updates and farming tips.
+            </p>
+            <form class="flex">
+                <input type="email" placeholder="Your email" 
+                    class="bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary w-full" />
+                <button type="submit" class="bg-primary hover:bg-accent text-white px-4 py-2 rounded-r-md">
+                <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            </div>
+            -->
+            
+        </div>
+    
+        <!-- Footer Bottom -->
+        <div class="pt-8 border-t border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                © 2025 SmartSaha. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+                <a href="#!" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                <a href="#!" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                <a href="#!" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+            </div>
+            </div>
+        </div>
+    
+        </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+    //     document.addEventListener('DOMContentLoaded', function () {
+    //     const track = document.getElementById('sliderTrack');
+    //     const slider = document.getElementById('heroSlider');
+    //     const dots = document.querySelectorAll('[data-dot]');
+    //     const total = 3; // 3 slides
+    //     let index = 0;
+    //     let timer = null;
+    //     const INTERVAL = 6000; // 6s auto-slide
+
+    //     function go(i) {
+    //     index = (i + total) % total;
+    //     track.style.transform = `translateX(-${index * 100}%)`;
+    //     dots.forEach((d, j) => d.classList.toggle('opacity-100', j === index));
+    //     dots.forEach((d, j) => d.classList.toggle('opacity-50', j !== index));
+    //     }
+
+    //     function start() {
+    //     stop();
+    //     timer = setInterval(() => go(index + 1), INTERVAL);
+    //     }
+    //     function stop() { if (timer) clearInterval(timer); }
+
+    //     dots.forEach((dot, i) => dot.addEventListener('click', () => { go(i); start(); }));
+
+    //     // Pause au survol (optionnel mais pratique)
+    //     slider.addEventListener('mouseenter', stop);
+    //     slider.addEventListener('mouseleave', start);
+
+    //     go(0);
+    //     start();
+    // });
+    </script>
+</body>
+</html>
