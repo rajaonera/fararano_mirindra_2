@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSaha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <script src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b481',
+                        secondary: '#6b8f71',
+                        accent: '#4ecda3',
+                        light: '#f8f9fa',
+                        dark: '#1a1a1a',
+                        earth: '#8b5a2b',
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        });
+
+    </script>
+</head>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<body class="bg-light text-dark overflow-x-hidden">
+
+    <nav class="fixed w-full z-40 bg-center bg-no-repeat h-20 md:h-20 lg:h-20"
+        style="background-image: url('./assets/4x/background-header@4x.png'); background-size: cover; max-width: 100vw;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center relative py-4">
+
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-10 w-auto rounded-md mt-4" src="./assets/logo smartsaha_HD.png" alt="Logo SmartSaha">
+                </div>
+
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <div class="relative flex items-center justify-center px-6 py-2">
+                        <h1 class="text-[#10b481] text-3xl font-bold" style="font-family: 'Quicksand', sans-serif;">
+                            SmartSaha
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="hidden lg:ml-6 lg:flex lg:items-center lg:space-x-4 text-white">
+                    <a href="#about" class="nav-link hover:text-[#f9f9f9] px-3 py-4 rounded-md text-sm font-medium">À Propos</a>
+                    <a href="#services" class="nav-link hover:text-[#f9f9f9] px-3 py-4 rounded-md text-sm font-medium">Services</a>
+                    <a href="#team" class="nav-link hover:text-[#f9f9f9] px-3 py-4 rounded-md text-sm font-medium">Équipe</a>
+                    <a href="./contact.html" class="nav-link hover:text-[#f9f9f9] px-3 py-4 rounded-md text-sm font-medium">Contact</a>
+                    <a href="./index.html" class="nav-link hover:text-[#f9f9f9] px-3 py-4 rounded-md text-sm font-medium">EN</a>
+                </div>
+
+                <div class="-mr-2 flex items-center lg:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-lg text-white hover:text-[#f9f9f9] focus:outline-none">
+                      <span class="sr-only">Ouvrir le menu principal</span>
+                      <!-- Icône burger -->
+                      <svg id="burger-icon" class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                      <!-- Icône croix, cachée par défaut -->
+                      <svg id="close-icon" class="hidden h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12M6 18L18 6" />
+                      </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden lg:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#f9f9f9]">
+                <a href="#about" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">À Propos</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#team" class="nav-link text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Équipe</a>
+                <a href="./contact.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="./index.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">EN</a>
+                <a href="https://smart-saha.onrender.com/">
+                    <button class="bg-primary hover:bg-accent text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium mt-2">Commencer</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" class="hero-image relative w-full h-screen grid grid-cols-1 md:grid-cols-2 pt-20">
+            
+        <div class="flex items-center justify-center h-full w-full font-semibold">
+      
+          <!-- Desktop (escalier) -->
+          <div class="hidden lg:flex relative items-center justify-center w-11/12 uppercase gap-6">
+            
+            <div class="relative z-20 -translate-y-24 translate-x-10">
+              <span class="absolute top-3 left-3 bg-black bg-opacity-20 backdrop-blur-sm text-white text-lg px-3 py-1 rounded">
+                Alertes Incendie & Sécheresse
+              </span>
+              <img src="./assets/evaluation.jpg" alt="Agriculture de précision" 
+                   class="w-72 h-80 object-cover rounded-xl shadow-xl transition-transform hover:scale-105">
+            </div>                
+      
+            <div class="relative z-10 -mx-6">
+              <img src="./assets/precision-agriculture.jpg" alt="Alertes Incendie & Sécheresse" 
+                   class="w-96 h-96 object-cover rounded-xl shadow-2xl transition-transform hover:scale-105">
+              <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-20 backdrop-blur-sm text-white text-lg px-3 py-1 rounded">
+                Agriculture de Précision
+              </span>
+            </div>
+      
+            <div class="relative z-20 translate-y-20 -translate-x-6">
+              <img src="./assets/market-access.jpg" alt="Accès au Marché" 
+                   class="w-72 h-80 object-cover rounded-xl shadow-xl transition-transform hover:scale-105">
+              <span class="absolute bottom-3 left-3 bg-black bg-opacity-20 backdrop-blur-sm text-white text-lg px-3 py-1 rounded">
+                Accès au Marché
+              </span>
+            </div>
+          </div>
+      
+          <!-- iPad et Mobile : Slider moderne -->
+          <div class="block md:flex lg:hidden w-full px-4">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+      
+                <div class="swiper-slide flex flex-col items-center gap-2">
+                  <img src="./assets/evaluation.jpg" class="w-full h-96 object-cover rounded-xl shadow-lg transition-transform hover:scale-105" alt="Alertes Incendie & Sécheresse">
+                  <span class="mt-2 bg-black bg-opacity-20 backdrop-blur-sm text-white text-sm px-3 py-1 rounded">
+                    Alertes Incendie & Sécheresse
+                  </span>
+                </div>
+      
+                <div class="swiper-slide flex flex-col items-center gap-2">
+                  <img src="./assets/precision-agriculture.jpg" class="w-full h-96 object-cover rounded-xl shadow-xl transition-transform hover:scale-105" alt="Agriculture de Précision">
+                  <span class="mt-2 bg-black bg-opacity-20 backdrop-blur-sm text-white text-sm px-3 py-1 rounded">
+                    Agriculture de Précision
+                  </span>
+                </div>
+      
+                <div class="swiper-slide flex flex-col items-center gap-2">
+                  <img src="./assets/market-access.jpg" class="w-full h-96 object-cover rounded-xl shadow-lg transition-transform hover:scale-105" alt="Accès au Marché">
+                  <span class="mt-2 bg-black bg-opacity-20 backdrop-blur-sm text-white text-sm px-3 py-1 rounded">
+                    Accès au Marché
+                  </span>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      
+        <!-- Texte et bouton -->
+        <div class="flex flex-col justify-center px-6 md:px-16 mt-6 md:mt-0 text-center md:text-left z-10 relative">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white">
+              Révolutionnez l'Agriculture avec SmartSaha
+            </h1>
+            <p class="hidden md:block text-sm md:text-lg mb-6 md:mb-8 text-gray-200">
+              Autonomiser les petits agriculteurs pour s'adapter au changement climatique et prospérer grâce à une agriculture intelligente et durable.
+            </p>
+            <a href="https://smart-saha.onrender.com/">
+              <button class="bg-white bg-opacity-90 hover:bg-opacity-100 px-6 md:px-8 py-2 md:py-3 rounded-lg text-base md:text-lg font-bold transition transform hover:scale-105 text-[#10b481] cursor-pointer">
+                Commencer
+              </button>
+            </a>            
+        </div>
+      
+      </section>
+
+    <!-- Section À Propos -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">À Propos de SmartSaha</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-up">
+                    <img src="./assets/Agribio.gif" alt="Agriculteurs à Madagascar" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-up">
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Petits Agriculteurs</h3>
+                    <p class="text-gray-700 mb-6">Piliers de l'économie africaine. Les petits agriculteurs sont essentiels à l'Afrique, produisant jusqu'à 80 % de sa nourriture, créant des emplois pour plus de 60 % de la population et protégeant l'environnement.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Le Problème</h3>
+                    <p class="text-gray-700 mb-6">Les petits agriculteurs font face à des conditions météorologiques imprévisibles, un manque d'accès au marché et des prix injustes. Ces problèmes menacent leur subsistance et la sécurité alimentaire.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Aperçu de la Solution</h3>
+                    <p class="text-gray-700 mb-6">Nous construisons une plateforme connectant les petits agriculteurs avec des acteurs du secteur privé. En utilisant l'IA et des outils de précision, nous aidons à renforcer la résilience et la productivité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section des Services -->
+    <section id="services" class="bg-gray-50">
+
+        <section class="py-20 bg-light text-dark">
+            <div class="max-w-6xl mx-auto px-6">
+              <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-primary">Nos Services Principaux</h2>
+                <p class="mt-4 text-gray-600 max-w-xl mx-auto">Découvrez comment SmartSaha transforme l'agriculture avec des outils intelligents.</p>
+                <div class="w-16 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+              </div>
+          
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Agriculture de Précision -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center" data-aos="fade-up">
+                    <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Agriculture de Précision</h3>
+                    <p class="text-gray-600 text-sm mb-6">Utilisation de capteurs, prévisions et analyses pour optimiser la performance des cultures et l'utilisation des ressources.</p>
+                    <a href="#precision-agri" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md font-semibold transition">En Savoir Plus</a>
+                </div>
+                
+                <!-- Outils d'Agribusiness -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center" data-aos="fade-up">
+                    <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Outils d'Agribusiness</h3>
+                    <p class="text-gray-600 text-sm mb-6">Outils numériques qui aident les entreprises à développer leurs opérations, gérer la logistique et suivre les performances.</p>
+                    <a href="#mvr" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md font-semibold transition">En Savoir Plus</a>
+                </div>
+                
+                <!-- Système MRV -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-8 text-center flex flex-col items-center" data-aos="fade-up">
+                    <div class="text-primary text-4xl mb-4">
+                    <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Système M.R.V</h3>
+                    <p class="text-gray-600 text-sm mb-6">Outils pour le Suivi, le Reporting et la Vérification pour soutenir une agriculture durable et efficace.</p>
+                    <a href="#canva" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md font-semibold transition">En Savoir Plus</a>
+                </div>
+  
+              </div>
+            </div>
+          </section>
+                  
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Agriculture de Précision -->
+            <div id="precision-agri" class="mb-20">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold text-primary mb-4" data-aos="fade-up">Agriculture de Précision</h3>
+                        <p class="text-gray-700 mb-6" data-aos="fade-up">Renforcer la Production Agricole avec l'Imagerie Satellite. Surveillez la santé des terres, anticipez les risques environnementaux et obtenez des informations agricoles personnalisées.</p>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start" data-aos="fade-left">
+                                <div class="flex-shrink-0 text-primary mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Personnalisable : </span>
+                                    De vos champs à vos doigts, accédez à un tableau de bord dynamique qui vous rapproche de votre terre. Obtenez des informations intelligentes pour agir efficacement.</p>
+                            </li>
+                            <li class="flex items-start" data-aos="fade-left">
+                                <div class="flex-shrink-0 text-primary mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Orienté Climat : </span>
+                                    Nous assistons votre production agricole avec un système de prévision pour soutenir vos décisions et garantir un rendement durable élevé.</p>
+                            </li>
+                            <li class="flex items-start" data-aos="fade-left">
+                                <div class="flex-shrink-0 text-primary mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <p class="ml-2 text-gray-700"><span class="text-[#212121] font-semibold">Complet : </span>
+                                    Tout ce dont vous avez besoin pour réussir et lancer votre tableau de bord, prêt à l'emploi. Aucune configuration supplémentaire requise.
+                                </p>
+                            </li>
+                        </ul>
+                        <button class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-md text-sm font-medium transition duration-300" data-aos="fade-up">En Savoir Plus</button>
+                    </div>
+                    <div class="md:w-1/2" data-aos="fade-up">
+                        <img src="./assets/satellite.png" alt="Agriculture de Précision" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Liste des Services -->
+            <div id="mvr" class="mb-20">
+                <h3 class="text-2xl font-semibold text-primary mb-8 text-center" data-aos="fade-up">Mesure, Reporting et Vérification.</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Collecte de Données</h4>
+                        <p class="text-gray-600">Nous pouvons mettre en œuvre un outil intuitif et convivial pour une collecte de données sans faille.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Tableau de Bord Convivial</h4>
+                        <p class="text-gray-600">Facilement compréhensible et optimisé pour une prise de décision éclairée.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Base de Données</h4>
+                        <p class="text-gray-600">Stockage robuste sécurisé par la puissance de la technologie Postgres et PostGIS.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Analyse Spatiale</h4>
+                        <p class="text-gray-600">Assistance à votre projet avec une Analyse Géospatiale, améliorée par des solutions de Télédétection et de G.I.S.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Protection des Données</h4>
+                        <p class="text-gray-600">Un espace de travail bien conçu intègre une protection des données de premier ordre, créant un environnement où la vie privée et la productivité coexistent harmonieusement.</p>
+                    </div>
+                    <div class="service-card bg-white p-6 rounded-lg shadow-md transition duration-300" data-aos="fade-up">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-3">Abonnements</h4>
+                        <p class="text-gray-600">Abonnements gratuits et payants utilisant Stripe.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Système MRV -->
+            <div id="canva">
+                <h3 class="text-2xl font-semibold text-primary mb-8 text-center" data-aos="fade-up">Comment fonctionne notre service ?</h3>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2" data-aos="fade-up">
+                        <div class="video-container rounded-lg shadow-xl">
+                            <iframe src="https://www.canva.com/design/DAGYzTIDa-c/YRVzquDVeA76WKafhB_Mbg/view?embed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="text-gray-700 mb-6" data-aos="fade-up">Notre système MRV fournit un suivi de bout en bout, de la collecte de données sur le terrain à l'analyse spatiale, le tout à travers un tableau de bord interactif et convivial.</p>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                            <h4 class="text-lg font-semibold text-primary mb-3" data-aos="fade-up">Avantages Clés :</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Collecte de données via une application mobile</p>
+                                </li>
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Analyse automatisée utilisant des outils alimentés par l'IA</p>
+                                </li>
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Résultats affichés sur un tableau de bord clair et intuitif</p>
+                                </li>
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Rapports générés et exportables</p>
+                                </li>
+                                <li class="flex items-start" data-aos="fade-left">
+                                    <div class="flex-shrink-0 text-primary mt-1">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <p class="ml-2 text-gray-700">Accès sécurisé aux données avec niveaux de permission</p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">Notre Équipe</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up">Les personnes passionnées derrière SmartSaha</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4" data-aos="fade-up"></div>
+        </div>
+    
+        <div class="relative">
+    
+            <!-- Conteneur défilable -->
+            <div id="team-container" class="flex gap-6 overflow-x-auto scroll-smooth px-2 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 sm:overflow-visible">
+            
+            <!-- Cartes d'équipe (min-w pour permettre le défilement) -->
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative" data-aos="fade-up">
+                <img src="./assets/Michel.jpg" alt="Membre de l'équipe" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Michel Raherimenanantsoa</h3>
+                <p class="text-gray-600 mb-4">Scientifique des données géospatiales et agricoles</p>
+                <p class="text-gray-700 text-sm">Expert en optimisation des pratiques agricoles utilisant des données et technologies géospatiales.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="https://www.linkedin.com/in/michel-raherimanantsoa-2bab19a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:smartsaapp@gmail.com?subject=Demande%20d'information&body=Bonjour%2C%20je%20souhaite%20..." class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative" data-aos="fade-up">
+                <img src="./assets/Fitahiana.jpg" alt="Membre de l'équipe" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Fitahiana Rahetimazava</h3>
+                <p class="text-gray-600 mb-4">Stratège en affaires et technologie</p>
+                <p class="text-gray-700 text-sm">Spécialisée dans la construction de solutions numériques évolutives et de stratégies commerciales pour l'innovation agricole.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="https://www.linkedin.com/in/fitahiana-rahetimazava-ramangamihanta-b77758145/" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:smartsaapp@gmail.com?subject=Demande%20d'information&body=Bonjour%2C%20je%20souhaite%20..." class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative"data-aos="fade-up">
+                <img src="./assets/Hasina.jpg" alt="Membre de l'équipe" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Hasina Andriatsitohaina</h3>
+                <p class="text-gray-600 mb-4">Expert en chaîne de valeur et investissement d'impact</p>
+                <p class="text-gray-700 text-sm">Se concentre sur le renforcement des chaînes de valeur agricoles et la promotion des investissements d'impact durables.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="https://www.linkedin.com/in/hasina-henintsoa-andriatsitohaina-2b2042a6/" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:smartsaapp@gmail.com?subject=Demande%20d'information&body=Bonjour%2C%20je%20souhaite%20..." class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            <div class="team-card bg-white min-w-[280px] rounded-lg overflow-hidden shadow-md relative"data-aos="fade-up">
+                <img src="./assets/Rindra.jpg" alt="Membre de l'équipe" class="w-full h-64 object-cover">
+                <div class="p-6">
+                <h3 class="text-xl font-semibold text-primary">Rindra <p>Ranaivosoa</p></h3>
+                <p class="text-gray-600 mb-4">Ingénieur logiciel et architecte système</p>
+                <p class="text-gray-700 text-sm">Conçoit et développe des plateformes conviviales pour la transformation numérique agricole.</p>
+                </div>
+                <div class="team-social absolute bottom-0 left-0 right-0 bg-primary bg-opacity-90 p-4 flex justify-center space-x-4 opacity-0 transform translate-y-10 transition duration-300">
+                <a href="https://www.linkedin.com/in/g%C3%A9rald-rindra-ranaivosoa-454549202/" class="text-white hover:text-accent"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:smartsaapp@gmail.com?subject=Demande%20d'information&body=Bonjour%2C%20je%20souhaite%20..." class="text-white hover:text-accent"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+    
+            </div>
+        </div>
+    
+        <div class="text-center mt-12" data-aos="fade-up">
+        </div>
+        </div>
+    </section>
+  
+    <!-- Section CTA -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Prêt à transformer votre ferme ?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-aos="fade-up">Rejoignez des milliers d'agriculteurs malgaches qui bénéficient déjà des solutions agricoles numériques de SmartSaha.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://smart-saha.onrender.com/"><button class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105" data-aos="fade-up">Commencez dès maintenant</button></a>
+                <a href="./contact.html"><button class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white px-8 py-3 rounded-md text-lg font-medium transition duration-300 transform hover:scale-105" data-aos="fade-up">Contactez notre équipe</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            
+            <div data-aos="fade-up">
+            <h1 class="text-3xl font-bold mb-4" style="color: #10b981; font-family: 'Quicksand', sans-serif;">
+                SmartSaha
+            </h1>
+            <p class="text-gray-400 mb-4">
+                Autonomiser les agriculteurs malgaches avec des solutions numériques intelligentes pour une agriculture durable.
+            </p>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/profile.php?id=61572257526521" class="text-gray-400 hover:text-white" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/smartsaha/posts/?feedView=all" class="text-gray-400 hover:text-white" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div data-aos="fade-up">
+            <h3 class="text-lg font-semibold mb-4">Liens Rapides</h3>
+            <ul class="space-y-2">
+                <li><a href="#home" class="text-gray-400 hover:text-white">Accueil</a></li>
+                <li><a href="#about" class="text-gray-400 hover:text-white">À Propos de Nous</a></li>
+                <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                <li><a href="#team" class="text-gray-400 hover:text-white">Notre Équipe</a></li>
+            </ul>
+            </div>
+            
+            <!-- Services -->
+            <div data-aos="fade-up">
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+                <li><a href="#!" class="text-gray-400 hover:text-white">Agriculture de Précision</a></li>
+                <li><a href="#!" class="text-gray-400 hover:text-white">Système MRV</a></li>
+                <li><a href="#!" class="text-gray-400 hover:text-white">Marché</a></li>
+            </ul>
+            </div>
+            
+        </div>
+    
+        <div class="pt-8 border-t border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                © 2025 SmartSaha. Tous droits réservés.
+            </p>
+            <div class="flex space-x-6">
+                <a href="#!" class="text-gray-400 hover:text-white text-sm">Politique de Confidentialité</a>
+                <a href="#!" class="text-gray-400 hover:text-white text-sm">Conditions de Service</a>
+                <a href="#!" class="text-gray-400 hover:text-white text-sm">Politique de Cookies</a>
+            </div>
+            </div>
+        </div>
+    
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 3000, // 10 secondes
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+        centeredSlides: true,
+      });
+
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeIcon = document.getElementById('close-icon');
+        const burgerIcon = document.getElementById('burger-icon');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');      
+            burgerIcon.classList.toggle('hidden');
+
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    burgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            });
+        });
+        
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+    </script>
+</body>
+</html>
